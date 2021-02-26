@@ -1,0 +1,122 @@
+/**
+Theme Name: Cederdorff Astra Child
+Author: Rasmus Cederdorff
+Author URI: http://cederdorff.com
+Description: Child Theme for Astra
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+
+#header{
+  max-width: 100%;
+}
+
+.typed, .typed2{
+  font-weight: bold;
+}
+
+
+.button_CTA{
+  background-color: #FFAFCC;
+  color: white;
+  border: none;
+  border-radius: 0%;
+  width: 120px;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1.4%;
+
+
+}
+
+
+/*header_img*/
+
+#coder_text, #designer_text{
+    display: none;
+}
+
+#displaySkill2{
+    display: none;
+}
+
+
+#tael_skridt:hover{
+  opacity: 0.7;
+}
+
+#lollitop:hover{
+  opacity: 0.7;
+}
+
+
+/*animated header custom style*/
+
+h2{
+    text-align: center;
+ 
+}
+
+
+/* animated header */
+#scrollTop{
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: #8089fd;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    opacity: 0.8;
+}
+
+
+/* tæl skridt projekt - knapper til onbaording */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border: 3px solid #E43E4C;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #E43E4C;
+}
+   
+
+/* LT video*/
+
+#LT_video{
+  border: none;
+}
+
+    @media only screen and (min-width: 600px) {
+      
+    }
+    
+
+    @media only screen and (min-width: 600px) {
+      
+    }
+
+
+    @media only screen and (min-width: 1024px) {
+      #structure_text, #creativity_text, #teamplayer_text{
+        display: none;
+      }
+    }
