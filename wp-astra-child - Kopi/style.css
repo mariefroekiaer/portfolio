@@ -1,0 +1,122 @@
+/**
+Theme Name: Cederdorff Astra Child
+Author: Rasmus Cederdorff
+Author URI: http://cederdorff.com
+Description: Child Theme for Astra
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+
+/*scroll fra menupunkter*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*typed header*/ 
+
+.type_header{
+  font-size: 18px;
+}
+
+.typed, .typed2{
+  font-weight: bold;
+}
+
+h2{
+  text-align: center;
+
+}
+
+/*project text*/
+
+.mobile_text{
+  font-size: 14px;
+}
+
+/*button*/
+.button_CTA{
+display: none;
+}
+
+
+/*projects img - hover*/
+#tael_skridt:hover{
+  opacity: 0.7;
+}
+
+#lollitop:hover{
+  opacity: 0.7;
+}
+
+
+/* scroll to top */
+#scrollTop{
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: #8089fd;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    opacity: 0.8;
+}
+
+/*footer*/
+
+#footer_h2, .typed2{
+  font-size: 14px;
+}
+
+/*media-query desktop*/ 
+
+    @media only screen and (min-width: 1024px) {
+      /*typed header*/
+
+      .type_header{
+        font-size: 30px;
+      }
+      
+      /*header_img*/
+
+      #coder_text, #designer_text{
+       display: none;
+      }
+      
+      /*button*/ 
+      .button_CTA{
+        display: block;
+        background-color: #FFAFCC;
+        color: white;
+        border: none;
+        border-radius: 0%;
+        width: 120px;
+        height: 40px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 1.4%;
+      
+      }
+
+      .button_CTA:hover{
+        width: 150px;
+        opacity: 0.8;
+      }
+
+      .mobile_text{
+        font-size: 16px;
+      }
+
+/*footer*/
+      #footer_h2, .typed2{
+        font-size: 30px;
+      }
+      
+    }

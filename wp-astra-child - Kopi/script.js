@@ -2,7 +2,10 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  if(document.querySelector("#scrollTop")){
     initScrollToTop();
+  }
   
     if(document.querySelector(".typed")){
       initTypedJs1();
@@ -14,16 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if(document.querySelector("#header")){
         imageHover();
-      }
-
-      if(document.querySelector(".section")){
-        currentSlide();
-      }
-
-      if(document.querySelector(".dot")){
-        showSlides(slideIndex);
-      }
-      
+      } 
    
   });
 
@@ -39,6 +33,7 @@ window.onscroll = function(){
 
 }
 
+//-----Hvis det er scrollet min 500 px skal scrollTop vises på siden--//
 function scrollFunction(){
     if(document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         document.getElementById("scrollTop").style.display = "block"
@@ -47,6 +42,7 @@ function scrollFunction(){
     }
 }
 
+//----ved klik på scollTop føres brugeren på i toppen af sitet (top:0)----//
 function scrollToTheTop() {
     window.scrollTo({
         top: 0,
@@ -61,10 +57,11 @@ function scrollToTheTop() {
 
 function initTypedJs1() {
    
+  //---refererer til typed.js ved at skrive new Typed---//
       new Typed(".type_header", {
-        strings: ["MANGLER DU EN HYBRID WEBDESIGNER?"],
+        strings: ["MANGLER DU EN HYBRID WEBDESIGNER?"], //---display denne tekst---//
         typeSpeed: 120,
-        loop: false,
+        loop: false, //---ikke loop--//
       });
 
   };
@@ -72,8 +69,8 @@ function initTypedJs1() {
   function initTypedJs2() {
    
     new Typed(".typed2", {
-      strings: ["MANGLER DU EN HYBRID WEBDESIGNER?"],
-      typeSpeed: 75,
+      strings: ["AMBITIØS", "POSITIV", "TEAMPLAYER"],
+      typeSpeed: 120,
       loop: true,
     });
 
@@ -85,8 +82,10 @@ function initTypedJs1() {
 
 function imageHover() {
 
-  let skillHover = document.getElementById("header");
+  let skillHover = document.getElementById("header"); //---refererer til billedet---//
   
+//---når brugeren fører musen ind over billedet bliver coder_text + designer_text vist---//
+
  skillHover.addEventListener("mouseover", function(){
       document.getElementById("coder_text").style.display = "block";
       document.getElementById("designer_text").style.display = "block";
@@ -94,34 +93,3 @@ function imageHover() {
   });
  
   }
-
-  //---------- teal skridt - onboarding--------------//
-  
-  
-
-  var slideIndex = 0;
-        showSlides(slideIndex);
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("section");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
