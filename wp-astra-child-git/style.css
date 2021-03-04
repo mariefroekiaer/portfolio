@@ -15,6 +15,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/*custom burger-icon mobil + tablet*/
+.ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle {
+  background: transparent;
+  color:black; 
+  border: none;
+}
+
+
 /*typed header*/ 
 
 .type_header{
